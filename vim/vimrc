@@ -1,0 +1,51 @@
+" vim
+set nocompatible
+
+" vim-plug
+call plug#begin()
+Plug 'mhartington/oceanic-next'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'othree/yajs.vim', { 'for': 'javascript' }
+call plug#end()
+
+" general config
+set number
+set relativenumber
+set history=100
+set showmode
+set visualbell
+set autoread
+set hidden
+set autoindent
+set smarttab
+set noet
+set showmatch
+set backspace=indent,eol,start
+set scrolloff=2
+set laststatus=2
+set cursorline
+set incsearch
+set hlsearch
+set showcmd
+set ignorecase
+set smartcase
+set splitbelow
+set splitright
+
+" mapping
+let mapleader=","
+map <leader>s :source $MYVIMRC<CR>
+map <leader>rc :vsp $MYVIMRC<CR>
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
+
+" theme
+set t_Co=256
+colorscheme OceanicNext
+set background=dark
+let g:airline_theme='oceanicnext'
+
