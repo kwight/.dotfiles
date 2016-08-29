@@ -4,3 +4,5 @@ export EDITOR="$VISUAL"
 
 # ANSI colours in iTerm2
 export CLICOLOR=1
+
+set -o vi
