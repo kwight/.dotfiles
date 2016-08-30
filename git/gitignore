@@ -33,3 +33,6 @@ Thumbs.db
 # Node packages
 node_modules/
 npm-debug.log
+
+# Swap
+*.swp
