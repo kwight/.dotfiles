@@ -2,6 +2,9 @@
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# PHP
+export PATH=/usr/local/php5/bin:$PATH
+
 # ANSI colours in iTerm2
 export CLICOLOR=1
 

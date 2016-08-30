@@ -10,3 +10,4 @@
 * `ln -s .dotfiles/git/gitignore .gitignore`
 * `git config --global color.ui true`
 * Open vim and install plugins with `:PlugInstall`.
+* Update PHP to 5.6 with `curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6`.
