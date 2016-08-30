@@ -38,7 +38,7 @@ set splitright
 " mapping
 let mapleader=","
 map <leader>s :source $MYVIMRC<CR>
-map <leader>rc :vsp $MYVIMRC<CR>
+map <leader>rc :tabnew $MYVIMRC<CR>
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
