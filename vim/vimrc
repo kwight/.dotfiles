@@ -51,3 +51,11 @@ colorscheme solarized
 set background=dark
 let g:airline_theme='solarized'
 let g:airline#extensions#branch#enabled = 1
+
+" CtrlP
+let g:ctrlp_max_files = 0
+let g:ctrlp_max_depth = 40
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
