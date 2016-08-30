@@ -41,6 +41,9 @@ set wildmenu
 let mapleader=","
 map <leader>s :source $MYVIMRC<CR>
 map <leader>rc :tabnew $MYVIMRC<CR>
+map <leader>bo :browse old<CR>
+map <leader>pi :PlugInstall<CR>
+map <leader>pc :PlugClean<CR>
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
