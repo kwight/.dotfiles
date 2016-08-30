@@ -34,6 +34,8 @@ set ignorecase
 set smartcase
 set splitbelow
 set splitright
+set wildmode=longest,list,full
+set wildmenu
 
 " mapping
 let mapleader=","
