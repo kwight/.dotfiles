@@ -3,9 +3,10 @@ set nocompatible
 
 " vim-plug
 call plug#begin()
-Plug 'mhartington/oceanic-next'
+Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 call plug#end()
 
@@ -45,7 +46,7 @@ nnoremap <Right> <nop>
 
 " theme
 set t_Co=256
-colorscheme OceanicNext
+colorscheme solarized
 set background=dark
-let g:airline_theme='oceanicnext'
-
+let g:airline_theme='solarized'
+let g:airline#extensions#branch#enabled = 1
