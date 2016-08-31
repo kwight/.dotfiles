@@ -64,3 +64,5 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
+let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+let g:ctrlp_use_caching = 0
