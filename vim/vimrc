@@ -12,6 +12,9 @@ Plug 'othree/yajs.vim', { 'for': 'javascript' }
 call plug#end()
 
 " general config
+set nobackup
+set nowritebackup
+set noswapfile
 set number
 set relativenumber
 set history=100
