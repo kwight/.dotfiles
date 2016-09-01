@@ -42,6 +42,7 @@ set wildmenu
 
 " mapping
 let mapleader=","
+map <leader>h :help 
 map <leader>s :source $MYVIMRC<CR>
 map <leader>rc :tabnew $MYVIMRC<CR>
 map <leader>bo :browse old<CR>
