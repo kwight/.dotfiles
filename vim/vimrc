@@ -20,8 +20,11 @@ set visualbell
 set autoread
 set hidden
 set autoindent
+set copyindent
 set smarttab
 set noet
+set softtabstop=4
+set shiftwidth=4
 set showmatch
 set backspace=indent,eol,start
 set scrolloff=2
