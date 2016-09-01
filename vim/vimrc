@@ -44,6 +44,7 @@ set wildmode=longest,list,full
 set wildmenu
 
 " mapping
+map ; :
 let mapleader=","
 map <leader>h :help 
 map <leader>s :source $MYVIMRC<CR>
