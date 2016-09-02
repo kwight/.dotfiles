@@ -8,6 +8,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-surround'
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 call plug#end()
 
