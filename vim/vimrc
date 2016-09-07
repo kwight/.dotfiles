@@ -12,6 +12,7 @@ Plug 'tpope/vim-surround'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'ConradIrwin/vim-bracketed-paste'
 call plug#end()
 
 " general config
