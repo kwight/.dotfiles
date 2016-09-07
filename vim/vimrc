@@ -47,6 +47,9 @@ set splitright
 set wildmode=longest,list,full
 set wildmenu
 
+" filetypes
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+
 " mapping
 map ; :
 let mapleader=","
