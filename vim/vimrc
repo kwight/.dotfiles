@@ -10,6 +10,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
+Plug 'elzr/vim-json', { 'for': 'json' }
 call plug#end()
 
 " general config
