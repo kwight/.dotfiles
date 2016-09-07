@@ -57,10 +57,6 @@ map <leader>bo :browse old<CR>
 map <leader>pi :PlugInstall<CR>
 map <leader>pc :PlugClean<CR>
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
-nnoremap <Up> <nop>
-nnoremap <Down> <nop>
-nnoremap <Left> <nop>
-nnoremap <Right> <nop>
 
 " theme
 set t_Co=256
