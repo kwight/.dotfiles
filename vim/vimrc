@@ -46,6 +46,7 @@ set splitbelow
 set splitright
 set wildmode=longest,list,full
 set wildmenu
+set timeoutlen=1000 ttimeoutlen=0
 
 " filetypes
 autocmd BufNewFile,BufRead *.md set filetype=markdown
