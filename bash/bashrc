@@ -8,4 +8,9 @@ export PATH=/usr/local/php5/bin:$PATH
 # ANSI colours in iTerm2
 export CLICOLOR=1
 
+# Git integration
+source ~/.dotfiles/git/git-completion.bash
+source ~/.dotfiles/git/git-prompt.bash
+export PS1='\u@\h \W$(__git_ps1 " (%s)")\$ '
+
 set -o vi
