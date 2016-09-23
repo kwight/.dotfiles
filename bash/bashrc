@@ -1,6 +1,9 @@
-# Set editor
-export VISUAL=vim
+# Use NeoVim as the editor.
+export VISUAL=nvim
 export EDITOR="$VISUAL"
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
 
 # PHP
 export PATH=/usr/local/php5/bin:$PATH
