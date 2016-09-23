@@ -5,10 +5,10 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 
-# PHP
+# Locate PHP.
 export PATH=/usr/local/php5/bin:$PATH
 
-# ANSI colours in iTerm2
+# ANSI colours in iTerm2.
 export CLICOLOR=1
 
 # Git integration
@@ -16,4 +16,5 @@ source ~/.dotfiles/git/git-completion.bash
 source ~/.dotfiles/git/git-prompt.bash
 export PS1='\u@\h \W$(__git_ps1 " (%s)")\$ '
 
+# Vim Mode for the command prompt.
 set -o vi
