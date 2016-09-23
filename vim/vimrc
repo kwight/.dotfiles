@@ -3,9 +3,7 @@ set nocompatible
 
 " vim-plug
 call plug#begin()
-Plug 'altercation/vim-colors-solarized'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'trevordmiller/nova-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
@@ -65,11 +63,7 @@ nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
 " theme
 set t_Co=256
-colorscheme solarized
-set background=dark
-let g:airline_theme='solarized'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#branch#enabled = 1
+colorscheme nova
 
 " CtrlP and Search
 let g:ctrlp_max_files = 0
