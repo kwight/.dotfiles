@@ -8,6 +8,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'elzr/vim-json', { 'for': 'json' }
