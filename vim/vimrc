@@ -12,6 +12,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'mxw/vim-jsx'
 Plug 'ConradIrwin/vim-bracketed-paste'
 call plug#end()
 
@@ -71,6 +72,9 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+
+" plugin settings
+let g:jsx_ext_required = 0
 
 " CtrlP and Search
 let g:ctrlp_max_files = 0
