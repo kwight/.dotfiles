@@ -80,6 +80,11 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:jsx_ext_required = 0
 let g:neomake_javascript_enabled_makers = ['eslint']
 autocmd! BufWritePost,BufEnter * Neomake
+let g:neomake_error_sign = {'text': '•', 'texthl': 'NeomakeErrorSign'}
+let g:neomake_warning_sign = {'text': '•', 'texthl': 'NeomakeWarningSign'}
+let g:neomake_info_sign = {'text': '•', 'texthl': 'NeomakeInfoSign'}
+let g:neomake_message_sign = {'text': '•', 'texthl': 'NeomakeMessageSign'}
+let g:deoplete#enable_at_startup = 1
 
 " CtrlP and Search
 let g:ctrlp_max_files = 0
