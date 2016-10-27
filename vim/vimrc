@@ -6,7 +6,8 @@ call plug#begin()
 Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'ekalinin/Dockerfile.vim'
@@ -58,6 +59,7 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 " mapping
 map ; :
 let mapleader=","
+map <leader>e :FZF<CR>
 map <leader>h :help 
 map <leader>t :tabnew 
 map <leader>s :source $MYVIMRC<CR>
@@ -86,15 +88,3 @@ let g:neomake_info_sign = {'text': '•', 'texthl': 'NeomakeInfoSign'}
 let g:neomake_message_sign = {'text': '•', 'texthl': 'NeomakeMessageSign'}
 let g:deoplete#enable_at_startup = 1
 
-" CtrlP and Search
-let g:ctrlp_max_files = 0
-let g:ctrlp_max_depth = 40
-let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
-if executable('ag')
-    set grepprg=ag\ --nogroup\ --nocolor
-    let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
-    let g:ctrlp_use_caching = 0
-endif
