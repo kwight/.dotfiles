@@ -13,7 +13,7 @@
 * Install NeoVim (`brew install neovim/neovim/neovim`) and create a `~/.config` file for it.
 * `ln -s ~/.vim ~/.config/nvim`
 * `ln -s ~/.vimrc ~/.config/nvim/init.vim`
+* `brew install fzf`
+* `brew install python3` and `pip3 install neovim` for `deoplete` (see `deoplete` README for details)
 * Open NeoVim (`v`) and install plugins with `,pi`.
 * Update PHP to 5.6 with `curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6`.
-* CtrlP requires `ag` be installed: `brew install the_silver_searcher`.
-* `brew install python3` and `pip3 install neovim` for `deoplete` (see `deoplete` README for details)
