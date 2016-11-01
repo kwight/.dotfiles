@@ -13,6 +13,7 @@
 * Install NeoVim (`brew install neovim/neovim/neovim`) and create a `~/.config` file for it.
 * `ln -s ~/.vim ~/.config/nvim`
 * `ln -s ~/.vimrc ~/.config/nvim/init.vim`
+* `yarn global add eslint` or `npm install -g eslint`
 * `brew install fzf`
 * `brew install python3` and `pip3 install neovim` for `deoplete` (see `deoplete` README for details)
 * Open NeoVim (`v`) and install plugins with `,pi`.
