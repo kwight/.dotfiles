@@ -68,6 +68,9 @@ map <leader>bo :browse old<CR>
 map <leader>pi :PlugInstall<CR>
 map <leader>pc :PlugClean<CR>
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprevious<CR>
+
 
 " theme
 colorscheme OceanicNext
