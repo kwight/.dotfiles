@@ -16,7 +16,7 @@ Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'mxw/vim-jsx'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'neomake/neomake'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 " general config
