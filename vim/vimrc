@@ -18,6 +18,8 @@ Plug 'mxw/vim-jsx'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'mattn/emmet-vim'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " general config
@@ -53,6 +55,7 @@ set wildmode=longest,list,full
 set wildmenu
 set timeoutlen=1000 ttimeoutlen=0
 set completeopt+=noinsert
+set updatetime=250
 
 " filetypes
 autocmd BufNewFile,BufRead *.md set filetype=markdown
