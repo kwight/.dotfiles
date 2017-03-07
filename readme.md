@@ -7,7 +7,7 @@
 * `ln -s .dotfiles/vim/vimrc ~/.vimrc`
 * `ln -s .dotfiles/bash/bashrc ~/.bashrc`
 * `ln -s .dotfiles/bash/bash_profile ~/.bash_profile`
-* `ln -s .dotfiles/git/gitignore .gitignore`
+* `ln -s .dotfiles/git/gitignore ~/.gitignore`
 * `ln -s .dotfiles/git/gitconfig ~/.gitconfig`
 * `vi ~/.gitconfig.local` and add user information (see: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 * Install NeoVim (`brew install neovim/neovim/neovim`) and create a `~/.config` file for it.
