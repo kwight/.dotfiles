@@ -4,3 +4,5 @@
 	ui = true
 [include]
 	path = ~/.gitconfig.local
+[core]
+	excludesfile = ~/.gitignore
