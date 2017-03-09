@@ -22,3 +22,6 @@
 [submodule "/Users/kwight/.dotfiles/vim/pack/packages/start/vim-json"]
 	path = /Users/kwight/.dotfiles/vim/pack/packages/start/vim-json
 	url = https://github.com/elzr/vim-json
+[submodule "/Users/kwight/.dotfiles/vim/pack/packages/start/emmet-vim"]
+	path = /Users/kwight/.dotfiles/vim/pack/packages/start/emmet-vim
+	url = https://github.com/mattn/emmet-vim
