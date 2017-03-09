@@ -10,3 +10,6 @@
 [submodule "vim/pack/packages/start/vim-surround"]
 	path = vim/pack/packages/start/vim-surround
 	url = https://github.com/tpope/vim-surround
+[submodule "vim/pack/packages/start/vim-commentary"]
+	path = vim/pack/packages/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
