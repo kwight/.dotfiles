@@ -4,3 +4,6 @@
 [submodule "vim/pack/packages/start/oceanic-next"]
 	path = vim/pack/packages/start/oceanic-next
 	url = https://github.com/mhartington/oceanic-next
+[submodule "vim/pack/packages/start/vim-gitgutter"]
+	path = vim/pack/packages/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
