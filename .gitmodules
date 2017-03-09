@@ -7,3 +7,6 @@
 [submodule "vim/pack/packages/start/vim-gitgutter"]
 	path = vim/pack/packages/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule "vim/pack/packages/start/vim-surround"]
+	path = vim/pack/packages/start/vim-surround
+	url = https://github.com/tpope/vim-surround
