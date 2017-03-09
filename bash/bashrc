@@ -1,9 +1,9 @@
 # Use NeoVim as the editor.
-export VISUAL=nvim
+export VISUAL=vim
 export EDITOR="$VISUAL"
-alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'
+alias v='vim'
+alias vi='vim'
+alias vim='vim'
 
 # Locate PHP.
 export PATH=/usr/local/php5/bin:$PATH
@@ -18,5 +18,3 @@ export PS1='\[\033[1;30m\]\h \[\033[1;36m\]$? \[\033[1;34m\]\W$(__git_ps1 " \[\0
 
 # Vim Mode for the command prompt.
 set -o vi
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

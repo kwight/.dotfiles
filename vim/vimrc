@@ -1,34 +1,13 @@
-" vim
+" General Configuration
 set nocompatible
-
-" vim-plug
-call plug#begin()
-Plug 'mhartington/oceanic-next'
-Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-fugitive'
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-commentary'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'othree/yajs.vim', { 'for': 'javascript' }
-Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'mxw/vim-jsx'
-Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'neomake/neomake'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'mattn/emmet-vim'
-Plug 'airblade/vim-gitgutter'
-call plug#end()
-
-" general config
+filetype indent plugin on
+syntax on
 set nobackup
 set nowritebackup
 set noswapfile
 set number
 set relativenumber
-set history=100
+set history=500
 set showmode
 set visualbell
 set autoread
@@ -55,44 +34,18 @@ set wildmode=longest,list,full
 set wildmenu
 set timeoutlen=1000 ttimeoutlen=0
 set completeopt+=noinsert
-set updatetime=250
+set updatetime=100
 
-" filetypes
+" File Types
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 " mapping
 map ; :
 let mapleader=","
-map <leader>e :FZF<CR>
-map <leader>h :help 
-map <leader>t :tabnew 
 map <leader>s :source $MYVIMRC<CR>
-map <leader>rc :tabnew $MYVIMRC<CR>
+map <leader>rc :e $MYVIMRC<CR>
 map <leader>bo :browse old<CR>
-map <leader>pi :PlugInstall<CR>
-map <leader>pc :PlugClean<CR>
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
 nnoremap \ :w<CR>
-
-
-" theme
-colorscheme OceanicNext
-set background=dark
-let g:airline_theme='oceanicnext'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-
-" plugin settings
-let g:jsx_ext_required = 0
-let g:neomake_javascript_enabled_makers = ['eslint']
-autocmd! BufWritePost,BufEnter * Neomake
-let g:neomake_error_sign = {'text': '•', 'texthl': 'NeomakeErrorSign'}
-let g:neomake_warning_sign = {'text': '•', 'texthl': 'NeomakeWarningSign'}
-let g:neomake_info_sign = {'text': '•', 'texthl': 'NeomakeInfoSign'}
-let g:neomake_message_sign = {'text': '•', 'texthl': 'NeomakeMessageSign'}
-let g:deoplete#enable_at_startup = 1
-
