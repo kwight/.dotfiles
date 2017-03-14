@@ -22,3 +22,6 @@
 [submodule "vim/pack/packages/start/emmet-vim"]
 	path = vim/pack/packages/start/emmet-vim
 	url = https://github.com/mattn/emmet-vim
+[submodule "vim/pack/packages/start/vim-gitgutter"]
+	path = vim/pack/packages/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
