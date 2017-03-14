@@ -33,6 +33,7 @@ set splitbelow
 set splitright
 set wildmode=longest,list,full
 set wildmenu
+set path+=**
 set timeoutlen=1000 ttimeoutlen=0
 set completeopt+=noinsert
 set updatetime=100
