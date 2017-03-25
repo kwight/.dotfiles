@@ -42,6 +42,7 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 " Mapping
 map ; :
+noremap ;; ;
 let mapleader=","
 map <leader>s :source $MYVIMRC<CR>
 map <leader>rc :e $MYVIMRC<CR>
