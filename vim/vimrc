@@ -51,6 +51,7 @@ nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
 nnoremap \ :w<CR>
+imap kk <Esc>
 
 " Theme
 colorscheme OceanicNext
