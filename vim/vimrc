@@ -23,7 +23,6 @@ set showmatch
 set backspace=indent,eol,start
 set scrolloff=5
 set laststatus=2
-set cursorline
 set incsearch
 set hlsearch
 set showcmd
@@ -55,6 +54,7 @@ imap kk <Esc>
 
 " Theme
 colorscheme OceanicNext
+hi CursorLineNR guifg=#ffffff
 
 " Plugin Settings
 let g:airline_theme='oceanicnext'
