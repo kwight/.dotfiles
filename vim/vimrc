@@ -36,6 +36,7 @@ set path+=**
 set timeoutlen=1000 ttimeoutlen=0
 set completeopt+=noinsert
 set updatetime=100
+set confirm
 
 " File Types
 autocmd BufNewFile,BufRead *.md set filetype=markdown
