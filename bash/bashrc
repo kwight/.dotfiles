@@ -1,9 +1,12 @@
 # Use NeoVim as the editor.
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# General aliases.
 alias v='vim'
 alias vi='vim'
 alias vim='vim'
+alias vrc='vim ~/.dotfiles/vim/vimrc'
 
 # FZF.
 alias e='vim $(fzf -m)'
