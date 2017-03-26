@@ -4,8 +4,15 @@ export EDITOR="$VISUAL"
 alias v='vim'
 alias vi='vim'
 alias vim='vim'
+
+# FZF.
 alias e='vim $(fzf -m)'
 alias es='cd ~/Sites/;SELECTION=$(fzf -m);cd -;vim ~/Sites/$SELECTION'
+
+# ripgrep.
+alias r='rg'
+alias rc='rg -c'
+alias rw='rg -w'
 
 # Locate PHP.
 export PATH=/usr/local/php5/bin:$PATH
