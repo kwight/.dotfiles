@@ -3,14 +3,15 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # General aliases.
-alias v='vim'
-alias vi='vim'
-alias vim='vim'
-alias vrc='vim ~/.dotfiles/vim/vimrc'
 alias brc='vim ~/.dotfiles/bash/bashrc'
-alias s='source ~/.dotfiles/bash/bash_profile'
-alias cdd='cd ~/.dotfiles'
+alias c='clear'
 alias cdc='cd ~/Sites/wp-calypso'
+alias cdd='cd ~/.dotfiles'
+alias cds='cd ~/Sites/'
+alias s='source ~/.dotfiles/bash/bash_profile'
+alias svu='svn update'
+alias v='vim'
+alias vrc='vim ~/.dotfiles/vim/vimrc'
 
 # Git.
 alias g='git status'
