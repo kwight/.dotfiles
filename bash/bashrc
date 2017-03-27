@@ -21,10 +21,13 @@ alias mc='make clean'
 alias md='make distclean'
 alias mr='make run'
 alias mt='make test'
+alias r='rm -rfv'
+alias rgc='rg -c'
 alias s='source ~/.dotfiles/bash/bash_profile'
 function shrug() { echo -n "¯\_(ツ)_/¯" | pbcopy; }
 alias svu='svn update'
-alias t='tail -f /Applications/MAMP/logs/php_error.log'
+alias t='phpunit'
+alias tf='tail -f /Applications/MAMP/logs/php_error.log'
 alias v='vim'
 alias vrc='vim ~/.dotfiles/vim/vimrc'
 
@@ -69,11 +72,6 @@ alias zomg='git reset --hard && git clean -f -d'
 alias e='vim $(fzf -m)'
 alias es='cd ~/Sites/;SELECTION=$(fzf -m);cd -;vim ~/Sites/$SELECTION'
 export FZF_DEFAULT_COMMAND='rg --files --follow'
-
-# ripgrep.
-alias r='rg'
-alias rc='rg -c'
-alias rw='rg -w'
 
 # Yarn.
 alias ya='yarn add'
