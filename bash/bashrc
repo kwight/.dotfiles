@@ -9,6 +9,9 @@ function cache() { echo -n "http://webcache.googleusercontent.com/search?q=cache
 alias cdc='cd ~/Sites/wp-calypso'
 alias cdd='cd ~/.dotfiles'
 alias cds='cd ~/Sites/'
+alias cdt='cd ~/Sites/trunk/src/'
+alias cdtp='cd ~/Sites/trunk/src/wp-content/plugins/'
+alias cdtt='cd ~/Sites/trunk/src/wp-content/themes/'
 alias h='sudo vim /etc/hosts'
 alias hi='history | grep'
 function lorem() { echo -n "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus, metus id molestie laoreet, magna eros aliquet neque, a mattis nisl nibh ut lacus. Fusce lobortis aliquam massa a adipiscing. Mauris sed nunc dui, quis molestie nunc." | pbcopy; }
