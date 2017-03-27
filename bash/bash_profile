@@ -1,1 +1,7 @@
+# Load the main .bashrc file.
 source ~/.dotfiles/bash/bashrc
+
+# Load any user-specific aliases.
+if [ -f ~/.bash_aliases ]; then
+	source ~/.bash_aliases
+fi
