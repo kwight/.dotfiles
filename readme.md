@@ -1,5 +1,7 @@
 # Dotfiles
 
+*Warning: these instructions are out-of-date. Refer to the commits for recent activity.*
+
 * `cd` to your home directory.
 * `git clone git@github.com:kwight/.dotfiles.git`
 * `ln -s .dotfiles/vim/vim ~/.vim`
