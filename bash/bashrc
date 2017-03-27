@@ -74,8 +74,6 @@ alias mc='make clean'
 alias md='make distclean'
 alias mr='make run'
 alias mt='make test'
-alias r='rm -rfv'
-alias rgc='rg -c'
 alias s='source ~/.dotfiles/bash/bash_profile'
 function shrug() { echo -n "¯\_(ツ)_/¯" | pbcopy; }
 alias svu='svn update'
