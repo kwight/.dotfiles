@@ -49,7 +49,7 @@ alias gl='git log'
 alias gp='git push'
 alias gpf='git push --force-with-lease'
 alias gpu='git pull'
-alias gpr='git pull --rebase'
+alias gpur='git pull --rebase'
 function gr() { git rebase -i HEAD~$1; }
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
