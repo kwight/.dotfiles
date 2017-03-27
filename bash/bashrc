@@ -39,9 +39,13 @@ alias greh='git reset --hard'
 alias grm='git rebase master'
 alias grs='git rebase --skip'
 alias gs='git show'
+function gsa() { git submodule add $1 vim/pack/packages/start/${1//https:\/\/github.com\/[a-zA-Z0-9-]*\/}; }
+function gsi() { git submodule init vim/pack/packages/start/$1; }
+alias gss='git submodule status'
 alias gst='git stash -u'
 alias gsta='git stash apply'
 alias gstl='git stash list'
+alias gsu='git submodule update --remote --merge'
 alias zomg='git reset --hard && git clean -f -d'
 
 # FZF.
