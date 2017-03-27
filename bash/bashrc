@@ -15,6 +15,7 @@ alias cdc='cd ~/Sites/wp-calypso'
 # FZF.
 alias e='vim $(fzf -m)'
 alias es='cd ~/Sites/;SELECTION=$(fzf -m);cd -;vim ~/Sites/$SELECTION'
+export FZF_DEFAULT_COMMAND='rg --files --follow'
 
 # ripgrep.
 alias r='rg'
