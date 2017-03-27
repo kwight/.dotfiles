@@ -20,6 +20,7 @@ export PS1='\[\033[1;30m\]\h \[\033[1;36m\]$? \[\033[1;34m\]\W$(__git_ps1 " \[\0
 set -o vi
 
 # Aliases and clipboard expansions.
+alias ba='vim ~/.bash_aliases'
 alias brc='vim ~/.dotfiles/bash/bashrc'
 alias c='clear'
 function cache() { echo -n "http://webcache.googleusercontent.com/search?q=cache:" | pbcopy; }
