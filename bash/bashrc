@@ -28,6 +28,7 @@ function shrug() { echo -n "¯\_(ツ)_/¯" | pbcopy; }
 alias svu='svn update'
 alias t='phpunit'
 alias tf='tail -f /Applications/MAMP/logs/php_error.log'
+function tracimg() { echo -n "[[Image($1.png, 100%)]]" | pbcopy; }
 alias v='vim'
 alias vrc='vim ~/.dotfiles/vim/vimrc'
 
