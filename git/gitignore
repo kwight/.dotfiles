@@ -37,5 +37,5 @@ npm-debug.log
 # Swap
 *.swp
 
-# Git
+# Vim
 .netrwhist
