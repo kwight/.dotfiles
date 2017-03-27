@@ -1,8 +1,25 @@
-# Use NeoVim as the editor.
+# Use Vim as the editor.
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# General aliases.
+# FZF.
+export FZF_DEFAULT_COMMAND='rg --files --follow'
+
+# Locate PHP.
+export PATH=/usr/local/php5/bin:$PATH
+
+# ANSI colours in iTerm2.
+export CLICOLOR=1
+
+# Git integration
+source ~/.dotfiles/git/git-completion.bash
+source ~/.dotfiles/git/git-prompt.bash
+export PS1='\[\033[1;30m\]\h \[\033[1;36m\]$? \[\033[1;34m\]\W$(__git_ps1 " \[\033[1;32m\]%s")\[\033[1;30m\] >\[\033[0m\] '
+
+# Vim Mode for the command prompt.
+set -o vi
+
+# Aliases and clipboard expansions.
 alias brc='vim ~/.dotfiles/bash/bashrc'
 alias c='clear'
 function cache() { echo -n "http://webcache.googleusercontent.com/search?q=cache:" | pbcopy; }
@@ -12,27 +29,8 @@ alias cds='cd ~/Sites/'
 alias cdt='cd ~/Sites/trunk/src/'
 alias cdtp='cd ~/Sites/trunk/src/wp-content/plugins/'
 alias cdtt='cd ~/Sites/trunk/src/wp-content/themes/'
-alias h='sudo vim /etc/hosts'
-alias hi='history | grep'
-function lorem() { echo -n "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus, metus id molestie laoreet, magna eros aliquet neque, a mattis nisl nibh ut lacus. Fusce lobortis aliquam massa a adipiscing. Mauris sed nunc dui, quis molestie nunc." | pbcopy; }
-alias l='ls -ahl'
-alias m='man'
-alias mc='make clean'
-alias md='make distclean'
-alias mr='make run'
-alias mt='make test'
-alias r='rm -rfv'
-alias rgc='rg -c'
-alias s='source ~/.dotfiles/bash/bash_profile'
-function shrug() { echo -n "¯\_(ツ)_/¯" | pbcopy; }
-alias svu='svn update'
-alias t='phpunit'
-alias tf='tail -f /Applications/MAMP/logs/php_error.log'
-function tracimg() { echo -n "[[Image($1.png, 100%)]]" | pbcopy; }
-alias v='vim'
-alias vrc='vim ~/.dotfiles/vim/vimrc'
-
-# Git.
+alias e='vim $(fzf -m)'
+alias es='cd ~/Sites/;SELECTION=$(fzf -m);cd -;vim ~/Sites/$SELECTION'
 alias g='git status'
 alias ga='git add -p'
 alias gaa='git add .'
@@ -67,31 +65,30 @@ alias gst='git stash -u'
 alias gsta='git stash apply'
 alias gstl='git stash list'
 alias gsu='git submodule update --remote --merge'
-alias zomg='git reset --hard && git clean -f -d'
-
-# FZF.
-alias e='vim $(fzf -m)'
-alias es='cd ~/Sites/;SELECTION=$(fzf -m);cd -;vim ~/Sites/$SELECTION'
-export FZF_DEFAULT_COMMAND='rg --files --follow'
-
-# Yarn.
+alias h='sudo vim /etc/hosts'
+alias hi='history | grep'
+function lorem() { echo -n "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus, metus id molestie laoreet, magna eros aliquet neque, a mattis nisl nibh ut lacus. Fusce lobortis aliquam massa a adipiscing. Mauris sed nunc dui, quis molestie nunc." | pbcopy; }
+alias l='ls -ahl'
+alias m='man'
+alias mc='make clean'
+alias md='make distclean'
+alias mr='make run'
+alias mt='make test'
+alias r='rm -rfv'
+alias rgc='rg -c'
+alias s='source ~/.dotfiles/bash/bash_profile'
+function shrug() { echo -n "¯\_(ツ)_/¯" | pbcopy; }
+alias svu='svn update'
+alias t='phpunit'
+alias tf='tail -f /Applications/MAMP/logs/php_error.log'
+function tracimg() { echo -n "[[Image($1.png, 100%)]]" | pbcopy; }
+alias v='vim'
+alias vrc='vim ~/.dotfiles/vim/vimrc'
 alias ya='yarn add'
 alias yga='yarn global add'
 alias ygr='yarn global remove'
 alias yi='yarn install'
 alias yr='yarn remove'
 alias ys='yarn start'
+alias zomg='git reset --hard && git clean -f -d'
 
-# Locate PHP.
-export PATH=/usr/local/php5/bin:$PATH
-
-# ANSI colours in iTerm2.
-export CLICOLOR=1
-
-# Git integration
-source ~/.dotfiles/git/git-completion.bash
-source ~/.dotfiles/git/git-prompt.bash
-export PS1='\[\033[1;30m\]\h \[\033[1;36m\]$? \[\033[1;34m\]\W$(__git_ps1 " \[\033[1;32m\]%s")\[\033[1;30m\] >\[\033[0m\] '
-
-# Vim Mode for the command prompt.
-set -o vi
