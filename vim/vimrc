@@ -46,6 +46,8 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 map ; :
 noremap ;; ;
 let mapleader=","
+map <leader>b :Buffers<CR>
+map <leader>e :Files<CR>
 map <leader>s :source $MYVIMRC<CR>
 map <leader>rc :e $MYVIMRC<CR>
 map <leader>bo :browse old<CR>
@@ -64,6 +66,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:fzf_layout = { 'down': '100%' }
 let g:jsx_ext_required = 0
 let g:validator_javascript_checkers = ['eslint']
 let g:validator_filetype_map = {"javascript.jsx": "javascript"}
