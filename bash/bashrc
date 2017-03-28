@@ -27,7 +27,6 @@ function cache() { echo -n "http://webcache.googleusercontent.com/search?q=cache
 alias cc='cd -'
 alias cl='clear'
 alias e='vim $(fzf -m)'
-alias es='cd ~/Sites/;SELECTION=$(fzf -m);cd -;vim ~/Sites/$SELECTION'
 alias f='rg'
 alias g='git status'
 alias ga='git add -p'
