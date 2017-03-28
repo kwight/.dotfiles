@@ -47,10 +47,12 @@ map ; :
 noremap ;; ;
 let mapleader=","
 map <leader>b :Buffers<CR>
-map <leader>e :Files<CR>
-map <leader>s :source $MYVIMRC<CR>
-map <leader>rc :e $MYVIMRC<CR>
 map <leader>bo :browse old<CR>
+map <leader>d "+d
+map <leader>e :Files<CR>
+map <leader>rc :e $MYVIMRC<CR>
+map <leader>s :source $MYVIMRC<CR>
+map <leader>y "+y
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
