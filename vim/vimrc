@@ -51,6 +51,7 @@ map <leader>bo :browse old<CR>
 map <leader>d "+d
 map <leader>e :Files<CR>
 map <leader>rc :e $MYVIMRC<CR>
+map <leader>p "+p
 map <leader>s :source $MYVIMRC<CR>
 map <leader>y "+y
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
