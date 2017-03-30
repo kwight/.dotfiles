@@ -54,6 +54,7 @@ map <leader>rc :e $MYVIMRC<CR>
 map <leader>p "+p
 map <leader>s :source $MYVIMRC<CR>
 map <leader>y "+y
+map <leader>yy ggVG"+y
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
