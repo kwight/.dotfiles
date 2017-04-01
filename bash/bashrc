@@ -3,7 +3,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # FZF.
-export FZF_DEFAULT_COMMAND='rg --files --follow'
+export FZF_DEFAULT_COMMAND="rg -g '!*bower_components*' --files"
 
 # Locate PHP.
 export PATH=/usr/local/php5/bin:$PATH
