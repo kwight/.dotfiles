@@ -41,6 +41,7 @@ set helpheight=100
 
 " File Types
 autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead .bash_aliases set filetype=sh
 
 " Mapping
 map ; :
