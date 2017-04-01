@@ -40,3 +40,6 @@
 [submodule "vim/pack/packages/start/vdebug"]
 	path = vim/pack/packages/start/vdebug
 	url = https://github.com/joonty/vdebug
+[submodule "vim/pack/packages/start/ale"]
+	path = vim/pack/packages/start/ale
+	url = https://github.com/w0rp/ale
