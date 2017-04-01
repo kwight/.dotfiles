@@ -4,6 +4,7 @@
 
 * `cd` to your home directory.
 * `git clone git@github.com:kwight/.dotfiles.git`
+* `git submodule update --init`
 * `ln -s .dotfiles/vim ~/.vim`
 * `ln -s .dotfiles/bash/bash_profile ~/.bash_profile`
 * `ln -s .dotfiles/git/gitignore ~/.gitignore`
