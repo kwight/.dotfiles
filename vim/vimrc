@@ -92,3 +92,5 @@ let g:fzf_layout = { 'down': '100%' }
 let g:jsx_ext_required = 0
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
+highlight link ALEErrorSign GitGutterDeleteDefault
+highlight link ALEWarningSign GitGutterChangeDefault
