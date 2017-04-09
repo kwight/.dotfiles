@@ -82,6 +82,8 @@ alias mt='make test'
 alias p='pwd'
 alias s='source ~/.dotfiles/bash/bash_profile'
 function shrug() { echo -n "¯\_(ツ)_/¯" | pbcopy; }
+alias sv='svn status'
+alias svd='svn diff | colordiff'
 alias svu='svn update'
 alias t='tmux'
 alias ta='tmux attach -t'
