@@ -80,7 +80,12 @@ alias p='pwd'
 alias s='source ~/.dotfiles/bash/bash_profile'
 function shrug() { echo -n "¯\_(ツ)_/¯" | pbcopy; }
 alias svu='svn update'
-alias t='phpunit'
+alias t='tmux'
+alias ta='tmux attach -t'
+alias tk='tmux kill-session -t'
+alias tl='tmux ls'
+alias tn='tmux new -s'
+alias te='phpunit'
 alias tfm='tail -f /Applications/MAMP/logs/php_error.log'
 function tracimg() { echo -n "[[Image($1.png, 100%)]]" | pbcopy; }
 alias v='vim'
