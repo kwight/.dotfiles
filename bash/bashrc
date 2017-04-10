@@ -20,6 +20,7 @@ export PS1='\[\033[1;30m\]\h \[\033[1;36m\]$? \[\033[1;34m\]\W$(__git_ps1 " \[\0
 set -o vi
 
 # Aliases and clipboard expansions.
+alias a='alias'
 alias ba='vim ~/.bash_aliases'
 alias brc='vim ~/.dotfiles/bash/bashrc'
 function c() { local dir;dir=$(find ${1:-.} \( -path '*/\.*' -o -path '*/node_modules*' -o -path '*/bower_components*' \) -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$dir"; }
@@ -80,6 +81,7 @@ alias md='make distclean'
 alias mr='make run'
 alias mt='make test'
 alias p='pwd'
+alias rmr='rm -rfv'
 alias so='source ~/.dotfiles/bash/bash_profile'
 function shrug() { echo -n "¯\_(ツ)_/¯" | pbcopy; }
 alias s='svn status'
@@ -95,6 +97,7 @@ alias tn='tmux new -s'
 alias te='phpunit'
 alias tfm='tail -f /Applications/MAMP/logs/php_error.log'
 function tracimg() { echo -n "[[Image($1.png, 100%)]]" | pbcopy; }
+alias ty='type'
 alias v='vim'
 alias vrc='vim ~/.dotfiles/vim/vimrc'
 alias ya='yarn add'
