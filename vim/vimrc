@@ -6,6 +6,7 @@ set termguicolors
 set nobackup
 set nowritebackup
 set noswapfile
+set number
 set relativenumber
 set history=500
 set showmode
