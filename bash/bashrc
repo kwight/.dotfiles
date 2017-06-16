@@ -51,6 +51,7 @@ alias gi='git init'
 alias gl='git log'
 alias gp='git push'
 alias gpf='git push --force-with-lease'
+alias gpo='git push -u origin'
 alias gpu='git pull'
 alias gpur='git pull --rebase'
 function gr() { git rebase -i HEAD~$1; }
