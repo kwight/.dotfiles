@@ -95,7 +95,6 @@ alias ta='tmux attach -t'
 alias tk='tmux kill-session -t'
 alias tn='tmux new -s'
 alias te='phpunit'
-alias tfm='tail -f /Applications/MAMP/logs/php_error.log'
 function tracimg() { echo -n "[[Image($1.png, 100%)]]" | pbcopy; }
 alias ty='type'
 alias v='vim'
