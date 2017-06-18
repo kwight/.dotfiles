@@ -39,7 +39,7 @@ set completeopt+=noinsert
 set updatetime=100
 set confirm
 set helpheight=100
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:.
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,space:.
 
 " File Types
 autocmd BufNewFile,BufRead *.md set filetype=markdown
