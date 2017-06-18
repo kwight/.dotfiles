@@ -39,6 +39,7 @@ set completeopt+=noinsert
 set updatetime=100
 set confirm
 set helpheight=100
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:.
 
 " File Types
 autocmd BufNewFile,BufRead *.md set filetype=markdown
@@ -57,6 +58,8 @@ map <leader>nn :set norelativenumber<CR>
 map <leader>p "+p
 map <leader>rc :e $MYVIMRC<CR>
 map <leader>s :source $MYVIMRC<CR>
+map <leader>w :set list<CR>
+map <leader>ww :set nolist<CR>
 map <leader>y "+y
 map <leader>yy ggVG"+y
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
