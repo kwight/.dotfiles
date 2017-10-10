@@ -27,7 +27,7 @@
     "workbench.editor.tabCloseButton": "off",
     "workbench.editor.showIcons": false,
     "workbench.editor.swipeToNavigate": false,
-    "workbench.settings.openDefaultSettings": false,
+    "workbench.settings.openDefaultSettings": true,
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "vs-seti",
     "zenMode.hideTabs": false
