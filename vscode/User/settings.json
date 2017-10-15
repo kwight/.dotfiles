@@ -35,5 +35,6 @@
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "vs-seti",
-  "zenMode.hideTabs": false
+  "zenMode.hideTabs": false,
+  "workbench.activityBar.visible": false
 }
