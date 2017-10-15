@@ -27,7 +27,6 @@ alias ba='vim ~/.bash_aliases'
 alias brc='vim ~/.dotfiles/bash/bashrc'
 function c() { local dir;dir=$(find ${1:-.} \( -path '*/\.*' -o -path '*/node_modules*' -o -path '*/bower_components*' \) -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$dir"; }
 function cache() { echo -n "http://webcache.googleusercontent.com/search?q=cache:" | pbcopy; }
-alias cc='cd -'
 alias cdo='cd ~/.dotfiles'
 alias cdoc='cd ~/Documents'
 alias cde='cd ~/Desktop'
