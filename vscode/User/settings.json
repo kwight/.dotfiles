@@ -36,5 +36,7 @@
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "vs-seti",
   "zenMode.hideTabs": false,
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "gitlens.blame.line.enabled": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false
 }
