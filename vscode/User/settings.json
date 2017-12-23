@@ -1,7 +1,6 @@
 {
   "editor.cursorBlinking": "solid",
-  "editor.fontFamily":
-    "'Fira Code', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'Fira Code', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.fontWeight": "300",
