@@ -37,5 +37,15 @@
   "zenMode.hideTabs": false,
   "workbench.activityBar.visible": false,
   "gitlens.blame.line.enabled": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressUpdateNotice": true,
+    "suppressWelcomeNotice": true
+  }
 }
