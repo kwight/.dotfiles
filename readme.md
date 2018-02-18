@@ -8,6 +8,7 @@
 * `ln -s .dotfiles/vim ~/.vim`
 * `ln -s .dotfiles/tmux/tmux.conf ~/.tmux.conf`
 * `ln -s .dotfiles/bash/bash_profile ~/.bash_profile`
+* `ln -s .dotfiles/bash/editrc ~/.editrc`
 * `ln -s .dotfiles/git/gitignore ~/.gitignore`
 * `ln -s .dotfiles/git/gitconfig ~/.gitconfig`
 * `vi ~/.gitconfig.local` and add user information (see: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
