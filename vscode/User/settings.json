@@ -47,5 +47,7 @@
   "workbench.iconTheme": "vs-seti",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
-  "zenMode.hideTabs": false
+  "zenMode.hideTabs": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.enabled": false
 }
