@@ -31,7 +31,10 @@
     "suppressUpdateNotice": true,
     "suppressWelcomeNotice": true
   },
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.enabled": false,
   "javascript.format.enable": false,
+  "php.suggest.basic": false,
   "terminal.external.osxExec": "iTerm.app",
   "vim.leader": ",",
   "vim.statusBarColorControl": true,
@@ -45,8 +48,5 @@
   "workbench.iconTheme": "vs-seti",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
-  "zenMode.hideTabs": false,
-  "gitlens.currentLine.enabled": false,
-  "gitlens.hovers.currentLine.enabled": false,
-  "php.suggest.basic": false
+  "zenMode.hideTabs": false
 }
