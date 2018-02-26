@@ -49,5 +49,6 @@
   "workbench.startupEditor": "none",
   "zenMode.hideTabs": false,
   "gitlens.currentLine.enabled": false,
-  "gitlens.hovers.currentLine.enabled": false
+  "gitlens.hovers.currentLine.enabled": false,
+  "php.suggest.basic": false
 }
