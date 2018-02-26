@@ -31,10 +31,8 @@
     "suppressUpdateNotice": true,
     "suppressWelcomeNotice": true
   },
-  "gitlens.blame.line.enabled": false,
   "javascript.format.enable": false,
   "terminal.external.osxExec": "iTerm.app",
-  "vim.disableAnnoyingNeovimMessage": true,
   "vim.leader": ",",
   "vim.statusBarColorControl": true,
   "window.zoomLevel": 1,
