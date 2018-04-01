@@ -113,6 +113,7 @@ alias te='phpunit'
 function tracimg() { echo -n "[[Image($1.png, 100%)]]" | pbcopy; }
 alias trc='v ~/.tmux.conf'
 alias ty='type'
+alias ubv='lsb_release -a'
 alias untar='tar xvzf'
 alias v='vim'
 alias vrc='vim ~/.dotfiles/vim/vimrc'
