@@ -49,9 +49,6 @@
     "editor.quickSuggestions": true
   },
   "php.suggest.basic": false,
-  "standard.autoFixOnSave": true,
-  "standard.enable": false,
-  "standard.run": "onType",
   "telemetry.enableTelemetry": false,
   "terminal.external.osxExec": "iTerm.app",
   "vim.leader": ",",
