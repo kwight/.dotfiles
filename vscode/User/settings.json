@@ -21,27 +21,10 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "eslint.autoFixOnSave": true,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": true,
   "git.confirmSync": false,
-  "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true,
-    "suppressUpdateNotice": true,
-    "suppressWelcomeNotice": true
-  },
-  "gitlens.codeLens.enabled": false,
-  "gitlens.currentLine.enabled": false,
-  "gitlens.hovers.currentLine.enabled": false,
-  "gitlens.keymap": "chorded",
   "javascript.format.enable": false,
   "markdown.preview.markEditorSelection": false,
   "[markdown]": {
@@ -49,10 +32,7 @@
     "editor.quickSuggestions": true
   },
   "php.suggest.basic": false,
-  "standard.autoFixOnSave": true,
-  "standard.enable": false,
   "telemetry.enableTelemetry": false,
-  "terminal.external.osxExec": "iTerm.app",
   "vim.leader": ",",
   "vim.statusBarColorControl": true,
   "window.zoomLevel": 1,
@@ -61,7 +41,6 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.tabCloseButton": "off",
   "workbench.editor.showIcons": false,
-  "workbench.editor.swipeToNavigate": false,
   "workbench.iconTheme": "vs-seti",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",

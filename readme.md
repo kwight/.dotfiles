@@ -15,4 +15,4 @@
 * install `eslint` for use with `ALE`
 * `brew install fzf` and `brew install ripgrep`
 * `brew install colordiff` if working with Subversion
-* `mv ~/Library/Application\ Support/Code/User/settings.json ~/Desktop; ln -s ~/.dotfiles/vscode/User/settings.json ~/Library/Application\ Support/Code/User/settings.json` if using VS Code
+* `ln -s ~/.dotfiles/vscode/User/settings.json .config/Code/User/settings.json`
