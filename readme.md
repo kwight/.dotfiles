@@ -13,6 +13,4 @@
 * `ln -s .dotfiles/git/gitconfig ~/.gitconfig`
 * `vi ~/.gitconfig.local` and add user information (see: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 * install `eslint` for use with `ALE`
-* `brew install fzf` and `brew install ripgrep`
-* `brew install colordiff` if working with Subversion
 * `ln -s ~/.dotfiles/vscode/User/settings.json .config/Code/User/settings.json`
