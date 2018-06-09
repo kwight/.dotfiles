@@ -29,6 +29,7 @@ alias cdoc='cd ~/Documents'
 alias cde='cd ~/Desktop'
 alias ch='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias cl='clear'
+alias colors='~/.dotfiles/bash/colors.sh'
 function e() { local file && file=$(fzf -m); if test -r "$file"; then vim $file; fi; }
 alias f="rg -g '!*bower_components*'"
 alias g='git status'
