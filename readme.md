@@ -1,6 +1,6 @@
 # Dotfiles
 
-**Warning: these instructions may be out-of-date. Refer to the commits for recent activity.**
+Note: the `master` branch is specific to macOS High Sierra. See the `bionic` branch for Ubuntu 18.04. 
 
 * `cd` to your home directory.
 * `git clone git@github.com:kwight/.dotfiles.git`
