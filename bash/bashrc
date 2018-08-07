@@ -6,7 +6,8 @@ export EDITOR="$VISUAL"
 export FZF_DEFAULT_COMMAND="rg -g '!*bower_components*' --files"
 
 # Ensure Homebrew packages are first in the PATH.
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:$PATH:$HOME/bin"
+export N_PREFIX=$HOME
 
 # Git integration
 source ~/.dotfiles/git/git-completion.bash
