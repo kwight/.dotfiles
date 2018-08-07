@@ -32,6 +32,14 @@ alias ch='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias cl='clear'
 alias colors='~/.dotfiles/bash/colors.sh'
 function e() { local file && file=$(fzf -m); if test -r "$file"; then vim $file; fi; }
+alias d="docker info"
+function db() { docker build "$@" .; }
+alias dc="docker container"
+alias dcl="docker container ls"
+alias di="docker image"
+alias dil="docker image ls"
+alias dr="docker run"
+alias dv="docker version"
 alias f="rg -g '!*bower_components*'"
 alias g='git status'
 alias ga='git add -p'
