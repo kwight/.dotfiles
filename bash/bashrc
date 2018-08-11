@@ -39,8 +39,11 @@ alias dcl="docker container ls"
 alias di="docker image"
 alias dil="docker image ls"
 alias dm="docker-machine"
+function dme() { eval $(docker-machine env $1); }
+function dmeu() { eval $(docker-machine env -u); }
 alias dml="docker-machine ls"
 alias dms="docker-machine ssh"
+alias dnl="docker node ls"
 alias dr="docker run"
 alias dp="docker push"
 alias ds="docker service"
