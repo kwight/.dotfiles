@@ -36,6 +36,8 @@ alias d="docker info"
 function db() { docker build "$@" .; }
 alias dc="docker container"
 alias dcl="docker container ls"
+function dcr() { local container=$(docker container ls | fzf | awk '{print $1;}'); docker container restart $container; }
+function dcs() { local container=$(docker container ls | fzf | awk '{print $1;}'); docker container stop $container; }
 alias dco="docker-compose"
 alias dcou="docker-compose up -d"
 alias di="docker image"
