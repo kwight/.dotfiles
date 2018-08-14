@@ -57,6 +57,11 @@
   "vim.statusBarColorControl": true,
   "window.zoomLevel": 1,
   "workbench.activityBar.visible": false,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f"
+  },
   "workbench.colorTheme": "Oceanic Plus",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.tabCloseButton": "off",
