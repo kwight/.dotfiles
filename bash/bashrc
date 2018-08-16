@@ -46,6 +46,7 @@ function dcr() { local container=$(docker container ls | fzf | awk '{print $1;}'
 function dcs() { local container=$(docker container ls | fzf | awk '{print $1;}'); docker container stop $container; }
 alias dco="docker-compose"
 alias dcou="docker-compose up -d"
+alias dcod="docker-compose down"
 alias dcp='yes | docker container prune'
 alias di="docker image"
 alias dil="docker image ls"
@@ -55,7 +56,7 @@ function dmeu() { eval $(docker-machine env -u); }
 alias dml="docker-machine ls"
 alias dms="docker-machine ssh"
 alias dnl="docker node ls"
-alias dr="docker run"
+alias dr="docker run -d"
 alias dp="docker push"
 alias ds="docker service"
 alias dsl="docker service ls"
