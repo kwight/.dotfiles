@@ -150,6 +150,7 @@ alias ni='npm install'
 alias nr='npm run'
 alias ns='npm start'
 alias p='pwd'
+function pb() { echo -n "$@" | pbcopy; }
 alias rmr='rm -rfv'
 alias so='source ~/.dotfiles/bash/bash_profile'
 function shrug() { echo -n "¯\_(ツ)_/¯" | pbcopy; }
