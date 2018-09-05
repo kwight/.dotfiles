@@ -102,6 +102,7 @@ function gcor() { git checkout -t origin/$1; }
 alias gcp='git cherry-pick'
 alias gd='git diff'
 alias gds='git diff --staged'
+function gfo() { git fetch origin pull/$1/head:$2 && git checkout $2; }
 alias gi='git init'
 alias gl='git log'
 alias gp='git push'
