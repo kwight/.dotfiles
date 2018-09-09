@@ -2,7 +2,6 @@
 set nocompatible
 filetype indent plugin on
 syntax on
-set termguicolors
 set t_ut=
 set nobackup
 set nowritebackup
