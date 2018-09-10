@@ -175,6 +175,7 @@ alias tkill='tmux kill-server'
 alias tn='tmux new -s'
 function tracimg() { echo -n "[[Image($1.png, 100%)]]" | pbcopy; }
 alias trc='v ~/.tmux.conf'
+alias tv='tmux -V'
 alias ty='type'
 alias ubv='lsb_release -a'
 alias untar='tar xvzf'
