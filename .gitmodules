@@ -34,9 +34,6 @@
 [submodule "vim/pack/packages/start/vim-fugitive"]
 	path = vim/pack/packages/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule "vim/pack/packages/start/vdebug"]
-	path = vim/pack/packages/start/vdebug
-	url = https://github.com/vim-vdebug/vdebug
 [submodule "vim/pack/packages/start/ale"]
 	path = vim/pack/packages/start/ale
 	url = https://github.com/w0rp/ale
