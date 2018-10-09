@@ -129,7 +129,6 @@ alias gsta='git stash apply'
 alias gstl='git stash list'
 alias gsu='git submodule update --recursive'
 alias gsui='git submodule update --init --recursive'
-alias h='sudo vim /etc/hosts'
 alias hi='history | grep'
 function lorem() { echo -n "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus, metus id molestie laoreet, magna eros aliquet neque, a mattis nisl nibh ut lacus. Fusce lobortis aliquam massa a adipiscing. Mauris sed nunc dui, quis molestie nunc." | pbcopy; }
 alias k='kubectl'
