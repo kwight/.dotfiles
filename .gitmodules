@@ -4,39 +4,6 @@
 [submodule "vim/pack/packages/start/oceanic-next"]
 	path = vim/pack/packages/start/oceanic-next
 	url = https://github.com/mhartington/oceanic-next
-[submodule "vim/pack/packages/start/vim-surround"]
-	path = vim/pack/packages/start/vim-surround
-	url = https://github.com/tpope/vim-surround
 [submodule "vim/pack/packages/start/vim-commentary"]
 	path = vim/pack/packages/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
-[submodule "vim/pack/packages/start/vim-jsx"]
-	path = vim/pack/packages/start/vim-jsx
-	url = https://github.com/mxw/vim-jsx
-[submodule "vim/pack/packages/start/yajs.vim"]
-	path = vim/pack/packages/start/yajs.vim
-	url = https://github.com/othree/yajs.vim
-[submodule "vim/pack/packages/start/vim-json"]
-	path = vim/pack/packages/start/vim-json
-	url = https://github.com/elzr/vim-json
-[submodule "vim/pack/packages/start/emmet-vim"]
-	path = vim/pack/packages/start/emmet-vim
-	url = https://github.com/mattn/emmet-vim
-[submodule "vim/pack/packages/start/vim-gitgutter"]
-	path = vim/pack/packages/start/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
-[submodule "vim/pack/packages/start/fzf.vim"]
-	path = vim/pack/packages/start/fzf.vim
-	url = https://github.com/junegunn/fzf.vim
-[submodule "vim/pack/packages/start/fzf"]
-	path = vim/pack/packages/start/fzf
-	url = https://github.com/junegunn/fzf
-[submodule "vim/pack/packages/start/vim-fugitive"]
-	path = vim/pack/packages/start/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule "vim/pack/packages/start/ale"]
-	path = vim/pack/packages/start/ale
-	url = https://github.com/w0rp/ale
-[submodule "vim/pack/packages/start/vdebug"]
-	path = vim/pack/packages/start/vdebug
-	url = https://github.com/vim-vdebug/vdebug
