@@ -52,7 +52,6 @@
   "standard.autoFixOnSave": true,
   "standard.enable": false,
   "telemetry.enableTelemetry": false,
-  "terminal.external.osxExec": "iTerm.app",
   "vim.leader": ",",
   "vim.statusBarColorControl": true,
   "window.zoomLevel": 1,
