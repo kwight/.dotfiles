@@ -183,11 +183,8 @@ alias sr='svn revert -R'
 alias su='svn update'
 alias sup='sudo poweroff'
 alias sur='sudo reboot'
-alias ta='tmux attach -t'
-alias td='tmux detach'
-alias te='phpunit'
-alias tl='tmux ls'
-function t() { local session=$(tl | fzf | awk '{print $1;}'); tmux switch -t $session || tmux attach -t $session || tmux; }
+alias tl='tmuxinator l'
+function t() { local session=$(tm ls | awk 'FNR>1 { for(i = 1; i <= NF; i++) { print $i; } }' | fzf); tm $session; }
 alias tk='tmux kill-session -t'
 alias tkill='tmux kill-server'
 alias tm='tmuxinator'
