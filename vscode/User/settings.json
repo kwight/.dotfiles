@@ -69,5 +69,6 @@
   "workbench.iconTheme": "vs-seti",
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
-  "zenMode.hideTabs": false
+  "zenMode.hideTabs": false,
+  "breadcrumbs.enabled": false
 }
