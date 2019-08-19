@@ -189,6 +189,7 @@ alias tk='tmux kill-session -t'
 alias tkill='tmux kill-server'
 alias tm='tmuxinator'
 alias tml='tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2'
+alias tmls='tmux list-sessions'
 alias tn='tmux new -s'
 function tracimg() { echo -n "[[Image($1.png, 100%)]]" | pbcopy; }
 alias trc='v ~/.tmux.conf'
