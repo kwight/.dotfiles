@@ -55,6 +55,7 @@ function dcsa() { local containers && containers=$(docker ps -q | tr '\n' ' ') &
 alias di="docker image"
 alias dih="docker image --help"
 alias dil="docker image ls"
+alias dlt="docker logs -f"
 alias dm="docker-machine"
 function dme() { eval $(docker-machine env $1); }
 function dmeu() { eval $(docker-machine env -u); }
