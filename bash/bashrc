@@ -186,6 +186,7 @@ alias sr='svn revert -R'
 alias su='svn update'
 alias sup='sudo poweroff'
 alias sur='sudo reboot'
+alias ta='tmux attach -t'
 alias tl='tmuxinator l'
 function t() { local session=$(tmuxinator ls | awk 'FNR>1 { for(i = 1; i <= NF; i++) { print $i; } }' | fzf); tmuxinator $session; }
 alias tk='tmux kill-session -t'
