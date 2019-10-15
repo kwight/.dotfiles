@@ -191,7 +191,7 @@ alias ta='tmux attach -t'
 alias tl='tmuxinator l'
 function t() { local session=$(tmuxinator ls | awk 'FNR>1 { for(i = 1; i <= NF; i++) { print $i; } }' | fzf); tmuxinator $session; }
 alias tk='tmux kill-session -t'
-alias tkill='tmux kill-server'
+alias tka='tmux kill-server'
 alias tm='tmuxinator'
 alias tml='tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2'
 alias tmls='tmux list-sessions'
