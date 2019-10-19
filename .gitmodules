@@ -7,3 +7,6 @@
 [submodule "vim/pack/packages/start/vim-commentary"]
 	path = vim/pack/packages/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
+[submodule "vim/pack/packages/start/dart-vim-plugin"]
+	path = vim/pack/packages/start/dart-vim-plugin
+	url = https://github.com/dart-lang/dart-vim-plugin
