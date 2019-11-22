@@ -129,6 +129,7 @@ alias gpo='git push -u origin'
 alias gpom='git push -u origin master'
 alias gpu='git pull --recurse-submodules'
 alias gpur='git pull --recurse-submodules --rebase'
+alias gpuu='git pull --recurse-submodules upstream'
 function gr() { git rebase -i HEAD~$1; }
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
