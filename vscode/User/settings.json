@@ -70,5 +70,8 @@
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
   "zenMode.hideTabs": false,
-  "breadcrumbs.enabled": false
+  "breadcrumbs.enabled": false,
+  "dart.warnWhenEditingFilesOutsideWorkspace": false,
+  "dart.debugExternalLibraries": true,
+  "dart.debugSdkLibraries": true
 }
