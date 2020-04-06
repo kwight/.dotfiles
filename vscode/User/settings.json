@@ -3,6 +3,9 @@
     "dart.warnWhenEditingFilesOutsideWorkspace": false,
     "dart.debugExternalLibraries": true,
     "dart.debugSdkLibraries": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
     "editor.cursorBlinking": "solid",
     "editor.fontFamily": "'Fira Code', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
