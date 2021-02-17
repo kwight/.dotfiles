@@ -110,6 +110,9 @@ alias gbi='git bisect start'
 alias gbib='git bisect bad'
 alias gbig='git bisect good'
 alias gbir='git bisect reset'
+gbs() {
+    git checkout "$(git for-each-ref refs/heads --color=always --sort -committerdate --format='%(HEAD)%(color:reset);%(color:yellow)%(refname:short)%(color:reset);%(contents:subject);%(color:green)(%(committerdate:relative))%(color:blue);<%(authorname)>' | column -t -s ';' | cut -c-$COLUMNS | fzf --ansi --no-sort --border --height 40% | awk '{print $1}')"
+}
 alias gc='git commit'
 alias gcam='git commit --amend'
 alias gcl='git clone --recurse-submodules'
@@ -120,6 +123,7 @@ alias gcom='git checkout master'
 alias gcon='git config --list'
 function gcor() { git checkout -t origin/$1; }
 function gcorc() { git fetch origin refs/pull/$1/head && git checkout -b $1 FETCH_HEAD; }
+alias gcot='git checkout trunk'
 alias gcp='git cherry-pick'
 alias gd='git diff'
 alias gds='git diff --staged'
@@ -141,6 +145,7 @@ alias greh='git reset --hard'
 alias grema='git remote add origin'
 alias grm='git rebase master'
 alias grs='git rebase --skip'
+alias grt='git rebase trunk'
 alias gs='git show'
 function gsa() { git submodule add $1 vim/pack/packages/start/${1//https:\/\/github.com\/[a-zA-Z0-9-]*\/}; }
 function gsd() { git submodule deinit vim/pack/packages/start/$1; }
