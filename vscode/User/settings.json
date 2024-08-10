@@ -1,23 +1,15 @@
 {
     "breadcrumbs.enabled": false,
-    "dart.warnWhenEditingFilesOutsideWorkspace": false,
-    "dart.debugExternalLibraries": true,
-    "dart.debugSdkLibraries": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true
-    },
     "editor.cursorBlinking": "solid",
     "editor.fontFamily": "'Fira Code', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 13,
-    "editor.formatOnSave": true,
     "editor.lineNumbers": "relative",
     "editor.minimap.maxColumn": 60,
     "editor.minimap.renderCharacters": true,
     "editor.minimap.showSlider": "always",
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     "editor.overviewRulerBorder": false,
-    "editor.renderIndentGuides": false,
     "editor.renderLineHighlight": "gutter",
     "editor.scrollBeyondLastLine": false,
     "editor.wordWrap": "bounded",
@@ -30,49 +22,32 @@
     "explorer.openEditors.visible": 0,
     "extensions.ignoreRecommendations": true,
     "git.confirmSync": false,
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
-        "suppressShowKeyBindingsNotice": true,
-        "suppressUpdateNotice": true,
-        "suppressWelcomeNotice": true
-    },
-    "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.codeLens.recentChange.enabled": false,
-    "gitlens.codeLens.authors.enabled": false,
-    "gitlens.hovers.currentLine.enabled": false,
-    "gitlens.keymap": "chorded",
-    "javascript.format.enable": false,
     "markdown.preview.markEditorSelection": false,
     "[markdown]": {
         "editor.wordWrap": "on",
-        "editor.quickSuggestions": true
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
     },
     "php.suggest.basic": false,
     "telemetry.enableTelemetry": false,
     "vim.leader": ",",
     "vim.statusBarColorControl": true,
     "window.zoomLevel": 1,
-    "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
         "statusBar.background": "#005f5f",
         "statusBar.noFolderBackground": "#005f5f",
-        "statusBar.debuggingBackground": "#005f5f"
+        "statusBar.debuggingBackground": "#005f5f",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.debuggingForeground": "#ffffff"
     },
-    "workbench.colorTheme": "Oceanic Plus",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.showIcons": false,
-    "workbench.editor.tabCloseButton": "off",
     "workbench.iconTheme": "vs-seti",
     "workbench.settings.openDefaultSettings": true,
     "workbench.startupEditor": "none",
-    "zenMode.hideTabs": false,
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
@@ -83,6 +58,23 @@
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": false
+        "editor.wordBasedSuggestions": "off"
     },
+    "editor.guides.indentation": false,
+    "workbench.editor.tabActionCloseVisibility": false,
+    "javascript.format.enable": false,
+    "javascript.validate.enable": false,
+    "standard.enable": true,
+    "standard.autoFixOnSave": true,
+    "standard.validate": [
+        "mjs",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "continue.telemetryEnabled": false,
+    "workbench.activityBar.location": "hidden",
+    "continue.enableTabAutocomplete": false,
+    "workbench.colorTheme": "Oceanic Plus"
 }
