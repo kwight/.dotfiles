@@ -6,7 +6,7 @@ Configuration for a Vim + tmux + ZSH workflow, optimized for SSH connections.
 
 ```sh
 cd ~
-git clone --recurse-submodules git@github.com:kwight/.dotfiles.git
+git clone --recurse-submodules https://github.com/kwight/.dotfiles.git
 ~/.dotfiles/install.zsh
 ```
 
