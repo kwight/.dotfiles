@@ -1,0 +1,8 @@
+{
+  "includeCoAuthoredBy": false,
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": false,
+    "allowUnsandboxedCommands": false
+  }
+}
