@@ -4,37 +4,18 @@ Configuration for a Vim + tmux + ZSH workflow, optimized for SSH connections to 
 
 ## Setup
 
-Clone the repository:
-
 ```sh
 cd ~
 git clone --recurse-submodules git@github.com:kwight/.dotfiles.git
-cd .dotfiles
+~/.dotfiles/install.zsh
 ```
 
-Create symlinks:
+Then create `~/.gitconfig.local` with your name and email (see [Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)).
 
-```sh
-ln -s ~/.dotfiles/vim ~/.vim
-ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
-ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
-ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/git/gitignore ~/.gitignore
-```
-
-Configure git user (see [Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)):
-
-```sh
-vim ~/.gitconfig.local
-```
-
-## Dependencies
-
-Install with Homebrew (macOS) or your package manager:
-
-- `fzf` - fuzzy finder
-- `ripgrep` - fast grep alternative
-- `bat` - cat with syntax highlighting (for fzf previews)
+The install script will:
+- Install Homebrew (if needed)
+- Install dependencies: `fzf`, `ripgrep`, `bat`, `tmux`
+- Create symlinks for vim, tmux, zsh, and git configs
 
 ## Vim Plugins
 
