@@ -7,9 +7,9 @@
 [submodule "vim/pack/packages/start/vim-commentary"]
 	path = vim/pack/packages/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
-[submodule "vim/pack/packages/start/dart-vim-plugin"]
-	path = vim/pack/packages/start/dart-vim-plugin
-	url = https://github.com/dart-lang/dart-vim-plugin
 [submodule "vim/pack/packages/start/vim-surround"]
 	path = vim/pack/packages/start/vim-surround
 	url = git@github.com:tpope/vim-surround.git
+[submodule "vim/pack/packages/start/fzf.vim"]
+	path = vim/pack/packages/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim

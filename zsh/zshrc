@@ -1,0 +1,243 @@
+# ------------------------------------------------------------------------------
+# ZSH Configuration
+# ------------------------------------------------------------------------------
+
+autoload -Uz vcs_info
+precmd() { vcs_info }
+export TERM=xterm-256color
+
+# ------------------------------------------------------------------------------
+# Editor
+# ------------------------------------------------------------------------------
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# ------------------------------------------------------------------------------
+# History
+# ------------------------------------------------------------------------------
+
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+
+# ------------------------------------------------------------------------------
+# Path Exports
+# ------------------------------------------------------------------------------
+
+export JAVASDK_PATH=/opt/homebrew/opt/openjdk@21/bin
+export GCLOUD_PATH=$HOME/Code/SDKs/google-cloud-sdk/bin
+export EMULATOR_PATH=$HOME/Code/SDKs/android/sdk/emulator
+export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
+export RUST_BIN=$HOME/.cargo/bin
+export LLVM_BIN=/opt/homebrew/opt/llvm/bin
+export IDB_BIN=$HOME/Code/ion/venv/bin/idb
+export LOCAL_BIN=$HOME/.local/bin
+
+export PATH="$JAVASDK_PATH:$IDB_BIN:$GCLOUD_PATH:$RUST_BIN:$EMULATOR_PATH:$LLVM_BIN:$LOCAL_BIN:$PATH"
+
+# ------------------------------------------------------------------------------
+# FZF
+# ------------------------------------------------------------------------------
+
+export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
+
+# ------------------------------------------------------------------------------
+# Aliases & Functions
+# ------------------------------------------------------------------------------
+
+# Introspection
+function a() {
+    if [[ $(whence -w $1) == "$1: function" ]]; then
+        type -f $1
+    elif [[ $(whence -w $1) == "$1: alias" ]]; then
+        alias $1
+    else
+        return 1
+    fi
+}
+
+# Bun
+alias bi='bun install'
+alias br='bun run --bun'
+alias brf='bun run format'
+alias brtd='bun run tauri dev'
+alias brtb='bun run tauri build'
+alias bu='bun update'
+
+# Claude
+alias cc="claude"
+alias ccd="claude --debug"
+
+# Composer
+alias cda='composer dump-autoload'
+
+# Navigation
+alias cdc="cd ~/code"
+alias cdi="cd ~/code/ion"
+alias cdo="cd ~/.dotfiles"
+function c() {
+    local dir
+    dir=$(find ${1:-.} \( -path '*/\.*' -o -path '*/node_modules*' \) -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$dir"
+}
+
+# General
+alias cl="clear"
+alias fm="open -a filemerge"
+alias l="ls -ahlG"
+alias m="man"
+alias p="pwd"
+alias rmr="rm -rfv"
+
+# Git
+alias g="git status"
+alias ga="git add -p"
+alias gaa="git add"
+alias gaaa="git add ."
+alias gb="git branch"
+alias gbi="git bisect start"
+alias gbib="git bisect bad"
+alias gbig="git bisect good"
+alias gbir="git bisect reset"
+gbs() {
+    git checkout "$(git for-each-ref refs/heads --color=always --sort -committerdate --format='%(HEAD)%(color:reset);%(color:yellow)%(refname:short)%(color:reset);%(contents:subject);%(color:green)(%(committerdate:relative))%(color:blue);<%(authorname)>' | column -t -s ';' | cut -c-$COLUMNS | fzf --ansi --no-sort --border --height 40% | awk '{print $1}')"
+}
+alias gc="git commit"
+alias gcam="git commit --amend"
+alias gcl="git clone --recurse-submodules"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+function gcol() { local branch=$(git branch | fzf | awk '{$1=$1;print}'); git checkout $branch; }
+alias gcom="git checkout main"
+alias gcon="git config --list"
+function gcor() { git checkout -t origin/$1; }
+function gcorc() { git fetch origin refs/pull/$1/head && git checkout -b $1 FETCH_HEAD; }
+alias gcot="git checkout trunk"
+alias gcp="git cherry-pick"
+alias gd="git diff"
+alias gds="git diff --staged"
+function gfo() { git fetch origin pull/$1/head:$2 && git checkout $2; }
+alias gi="git init"
+alias gl="git log"
+alias gp="git push"
+alias gpf="git push --force-with-lease"
+function gpo() { local branch=$(git branch --show-current) && git push -u origin $branch; }
+alias gpom="git push -u origin main"
+alias gpu="git pull --recurse-submodules"
+alias gpur="git pull --recurse-submodules --rebase"
+alias gpuu="git pull --recurse-submodules upstream"
+function gr() { git rebase -i HEAD~$1; }
+alias gra="git rebase --abort"
+alias grc="git rebase --continue"
+alias gre="git reset"
+alias greh="git reset --hard"
+alias grema="git remote add origin"
+alias grm="git rebase main"
+alias grs="git rebase --skip"
+alias grt="git rebase trunk"
+alias gs="git show"
+function gsa() { git submodule add $1 vim/pack/packages/start/${1//https:\/\/github.com\/[a-zA-Z0-9-]*\/}; }
+function gsd() { git submodule deinit vim/pack/packages/start/$1; }
+function gsi() { git submodule init vim/pack/packages/start/$1; }
+alias gss="git submodule status"
+alias gst="git stash -u"
+alias gsta="git stash apply"
+alias gstd="git stash drop"
+alias gstl="git stash list"
+alias gsts="git stash show -p"
+alias gsu="git submodule update --recursive"
+alias gsui="git submodule update --init --recursive"
+alias zomg="git reset --hard && git clean -f -d"
+
+# History
+alias hi="history | rg"
+
+# Ollama
+alias ol="ollama list"
+alias op="ollama pull"
+alias ops="ollama ps"
+function or() { local model=$(ollama list | fzf | awk '{print $1}'); ollama run $model; }
+
+# Python
+alias pfr="pip freeze > requirements.txt"
+alias pip=pip3
+alias pir="pip install -r requirements.txt"
+alias pv="python --version"
+alias pve="python -m venv .venv"
+alias pvea="source .venv/bin/activate"
+alias pved="deactivate"
+alias python=python3
+
+# SSH / Tart VM
+alias sc="ssh admin@clanker.local"
+alias tic="tart ip clanker --resolver arp"
+alias trc="tart run clanker --vnc-experimental"
+
+# Source
+alias so="source ~/.zshrc"
+
+# Tmux
+alias ta='tmux attach -t'
+alias tl='tmux list-sessions'
+alias tla='tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2'
+alias tk='tmux kill-session -t'
+alias tka='tmux kill-server'
+alias tn='tmux new -s'
+alias trc='vim ~/.tmux.conf'
+alias tv='tmux -V'
+
+# Vim
+alias v="vim"
+function vf() {
+    local file
+    file=$(fzf --preview "bat --color=always --style=numbers {}") || return
+    vim "$file"
+}
+function vg() {
+    local result file line
+    result=$(rg --line-number "$1" | fzf --delimiter=: --preview 'bat --color=always --highlight-line {2} {1}') || return
+    file=$(echo "$result" | awk -F: '{print $1}')
+    line=$(echo "$result" | awk -F: '{print $2}')
+    vim "+$line" "$file"
+}
+alias vrc="vim ~/.dotfiles/vim/vimrc"
+
+# ZSH Config
+alias zrc="vim ~/.zshrc"
+alias zrcg="curl -sL https://gist.githubusercontent.com/kwight/2e0b87edaa301bf47885cc1fc156b51f/raw -o ~/.zshrc && source ~/.zshrc"
+
+# ------------------------------------------------------------------------------
+# Shell Settings
+# ------------------------------------------------------------------------------
+
+bindkey -v
+
+zstyle ':vcs_info:git:*' formats '%b '
+setopt PROMPT_SUBST
+PS1='%F{magenta}%m%f %F{cyan}%? %F{blue}%1~%f %F{green}${vcs_info_msg_0_}%F{white}> '
+
+# ------------------------------------------------------------------------------
+# Tool Configurations
+# ------------------------------------------------------------------------------
+
+# Herd PHP
+export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
+export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"
+export PATH="$HOME/Library/Application Support/Herd/bin/:$PATH"
+
+# Herd NVM
+export NVM_DIR="$HOME/Library/Application Support/Herd/config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+[[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
+
+# Bun
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
