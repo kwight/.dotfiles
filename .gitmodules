@@ -9,7 +9,7 @@
 	url = https://github.com/tpope/vim-commentary
 [submodule "vim/pack/packages/start/vim-surround"]
 	path = vim/pack/packages/start/vim-surround
-	url = git@github.com:tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround
 [submodule "vim/pack/packages/start/fzf.vim"]
 	path = vim/pack/packages/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
