@@ -1,6 +1,6 @@
 # Dotfiles
 
-Configuration for a Vim + tmux + ZSH workflow, optimized for SSH connections to Tart VMs.
+Configuration for a Vim + tmux + ZSH workflow, optimized for SSH connections.
 
 ## Setup
 
