@@ -75,8 +75,11 @@ alias bu='bun update'
 alias cc="claude"
 alias ccd="claude --debug"
 
-# Composer
+# Laravel
 alias cda='composer dump-autoload'
+alias pacc="php artisan cache:clear"
+alias pamfs="php artisan migrate:fresh --seed"
+alias paqw="php artisan queue:work --queue=critical,default,low"
 
 # Navigation
 alias cdc="cd ~/code"
@@ -174,10 +177,8 @@ alias pvea="source .venv/bin/activate"
 alias pved="deactivate"
 alias python=python3
 
-# SSH / Tart VM
-alias sc="ssh admin@clanker.local"
-alias tic="tart ip clanker --resolver arp"
-alias trc="tart run clanker --vnc-experimental"
+# Tart VM
+alias ttl="tart list"
 
 # Source
 alias so="source ~/.zshrc"
