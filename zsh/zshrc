@@ -73,6 +73,7 @@ function c() {
 }
 alias cc="claude"
 alias ccd="claude --debug"
+alias cczomg="claude --allow-dangerously-skip-permissions"
 alias cda='composer dump-autoload'
 alias cdc="cd ~/code"
 alias cdi="cd ~/code/ion"
