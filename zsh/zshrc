@@ -28,21 +28,6 @@ setopt SHARE_HISTORY
 setopt APPEND_HISTORY
 
 # ------------------------------------------------------------------------------
-# Path Exports
-# ------------------------------------------------------------------------------
-
-export JAVASDK_PATH=/opt/homebrew/opt/openjdk@21/bin
-export GCLOUD_PATH=$HOME/Code/SDKs/google-cloud-sdk/bin
-export EMULATOR_PATH=$HOME/Code/SDKs/android/sdk/emulator
-export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
-export RUST_BIN=$HOME/.cargo/bin
-export LLVM_BIN=/opt/homebrew/opt/llvm/bin
-export IDB_BIN=$HOME/Code/ion/venv/bin/idb
-export LOCAL_BIN=$HOME/.local/bin
-
-export PATH="$JAVASDK_PATH:$IDB_BIN:$GCLOUD_PATH:$RUST_BIN:$EMULATOR_PATH:$LLVM_BIN:$LOCAL_BIN:$PATH"
-
-# ------------------------------------------------------------------------------
 # FZF
 # ------------------------------------------------------------------------------
 
@@ -218,7 +203,6 @@ fi
 # Herd PHP
 export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
 export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"
-export PATH="$HOME/Library/Application Support/Herd/bin/:$PATH"
 
 # Herd NVM
 export NVM_DIR="$HOME/Library/Application Support/Herd/config/nvm"
@@ -228,8 +212,6 @@ export NVM_DIR="$HOME/Library/Application Support/Herd/config/nvm"
 
 # Bun
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Local overrides (not in version control)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
