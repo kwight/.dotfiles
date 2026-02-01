@@ -166,7 +166,14 @@ alias tla='tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d 
 alias tn='tmux new -s'
 alias trc='vim ~/.tmux.conf'
 alias ttl="tart list"
-alias tv='tmux -V'
+function tvl() {
+    [[ $# -lt 1 ]] && { echo "Usage: tvl <host>"; return 1; }
+    ssh -t "$1" "tmux list-sessions"
+}
+function tvs() {
+    [[ $# -lt 2 ]] && { echo "Usage: tvs <host> <session>"; return 1; }
+    ssh -t "$1" "tmux new-session -A -s $2"
+}
 alias v="vim"
 function vf() {
     local file
