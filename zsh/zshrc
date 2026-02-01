@@ -242,3 +242,6 @@ export NVM_DIR="$HOME/Library/Application Support/Herd/config/nvm"
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Local overrides (not in version control)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
