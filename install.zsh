@@ -7,6 +7,10 @@ set -e
 
 DOTFILES="$HOME/.dotfiles"
 
+# Initialize vim plugin submodules
+echo "Initializing submodules..."
+git -C "$DOTFILES" submodule update --init --recursive
+
 # Install Homebrew if not present
 if ! command -v brew &> /dev/null; then
     echo "Installing Homebrew..."
