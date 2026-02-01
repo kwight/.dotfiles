@@ -193,7 +193,16 @@ bindkey -v
 
 zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
-PS1='%F{magenta}%m%f %F{cyan}%? %F{blue}%1~%f %F{green}${vcs_info_msg_0_}%F{white}> '
+
+# Detect VM and set prompt accordingly
+IS_VM=false
+[[ $(sysctl -n hw.model 2>/dev/null) == "VirtualMac"* ]] && IS_VM=true
+
+if [[ "$IS_VM" == "true" ]]; then
+    PS1='%K{red}%F{white}%m%f%k %F{cyan}%? %F{blue}%1~%f %F{green}${vcs_info_msg_0_}%F{white}> '
+else
+    PS1='%F{magenta}%m%f %F{cyan}%? %F{blue}%1~%f %F{green}${vcs_info_msg_0_}%F{white}> '
+fi
 
 # ------------------------------------------------------------------------------
 # Tool Configurations
