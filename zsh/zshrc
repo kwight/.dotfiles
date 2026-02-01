@@ -182,7 +182,7 @@ function vg() {
 alias vrc="vim ~/.dotfiles/vim/vimrc"
 alias zomg="git reset --hard && git clean -f -d"
 alias zrc="vim ~/.zshrc"
-alias zrcg="curl -sL https://gist.githubusercontent.com/kwight/2e0b87edaa301bf47885cc1fc156b51f/raw -o ~/.zshrc && source ~/.zshrc"
+alias zrcl="vim ~/.zshrc.local"
 
 # ------------------------------------------------------------------------------
 # Shell Settings
