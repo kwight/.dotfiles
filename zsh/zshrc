@@ -52,7 +52,7 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 # Aliases & Functions
 # ------------------------------------------------------------------------------
 
-function a() {
+a() {
     if [[ $(whence -w $1) == "$1: function" ]]; then
         type -f $1
     elif [[ $(whence -w $1) == "$1: alias" ]]; then
@@ -67,7 +67,7 @@ alias brf='bun run format'
 alias brtb='bun run tauri build'
 alias brtd='bun run tauri dev'
 alias bu='bun update'
-function c() {
+c() {
     local dir
     dir=$(find ${1:-.} \( -path '*/\.*' -o -path '*/node_modules*' \) -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$dir"
 }
@@ -89,7 +89,7 @@ alias gbi="git bisect start"
 alias gbib="git bisect bad"
 alias gbig="git bisect good"
 alias gbir="git bisect reset"
-function gbs() {
+gbs() {
     git checkout "$(git for-each-ref refs/heads --color=always --sort -committerdate --format='%(HEAD)%(color:reset);%(color:yellow)%(refname:short)%(color:reset);%(contents:subject);%(color:green)(%(committerdate:relative))%(color:blue);<%(authorname)>' | column -t -s ';' | cut -c-$COLUMNS | fzf --ansi --no-sort --border --height 40% | awk '{print $1}')"
 }
 alias gc="git commit"
@@ -97,26 +97,26 @@ alias gcam="git commit --amend"
 alias gcl="git clone --recurse-submodules"
 alias gco="git checkout"
 alias gcob="git checkout -b"
-function gcol() { local branch=$(git branch | fzf | awk '{$1=$1;print}'); git checkout $branch; }
+gcol() { local branch=$(git branch | fzf | awk '{$1=$1;print}'); git checkout $branch; }
 alias gcom="git checkout main"
 alias gcon="git config --list"
-function gcor() { git checkout -t origin/$1; }
-function gcorc() { git fetch origin refs/pull/$1/head && git checkout -b $1 FETCH_HEAD; }
+gcor() { git checkout -t origin/$1; }
+gcorc() { git fetch origin refs/pull/$1/head && git checkout -b $1 FETCH_HEAD; }
 alias gcot="git checkout trunk"
 alias gcp="git cherry-pick"
 alias gd="git diff"
 alias gds="git diff --staged"
-function gfo() { git fetch origin pull/$1/head:$2 && git checkout $2; }
+gfo() { git fetch origin pull/$1/head:$2 && git checkout $2; }
 alias gi="git init"
 alias gl="git log"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
-function gpo() { local branch=$(git branch --show-current) && git push -u origin $branch; }
+gpo() { local branch=$(git branch --show-current) && git push -u origin $branch; }
 alias gpom="git push -u origin main"
 alias gpu="git pull --recurse-submodules"
 alias gpur="git pull --recurse-submodules --rebase"
 alias gpuu="git pull --recurse-submodules upstream"
-function gr() { git rebase -i HEAD~$1; }
+gr() { git rebase -i HEAD~$1; }
 alias gra="git rebase --abort"
 alias grc="git rebase --continue"
 alias gre="git reset"
@@ -126,9 +126,9 @@ alias grm="git rebase main"
 alias grs="git rebase --skip"
 alias grt="git rebase trunk"
 alias gs="git show"
-function gsa() { git submodule add $1 vim/pack/packages/start/${1//https:\/\/github.com\/[a-zA-Z0-9-]*\/}; }
-function gsd() { git submodule deinit vim/pack/packages/start/$1; }
-function gsi() { git submodule init vim/pack/packages/start/$1; }
+gsa() { git submodule add $1 vim/pack/packages/start/${1//https:\/\/github.com\/[a-zA-Z0-9-]*\/}; }
+gsd() { git submodule deinit vim/pack/packages/start/$1; }
+gsi() { git submodule init vim/pack/packages/start/$1; }
 alias gss="git submodule status"
 alias gst="git stash -u"
 alias gsta="git stash apply"
@@ -143,7 +143,7 @@ alias m="man"
 alias ol="ollama list"
 alias op="ollama pull"
 alias ops="ollama ps"
-function or() { local model=$(ollama list | fzf | awk '{print $1}'); ollama run $model; }
+or() { local model=$(ollama list | fzf | awk '{print $1}'); ollama run $model; }
 alias p="pwd"
 alias pacc="php artisan cache:clear"
 alias pamfs="php artisan migrate:fresh --seed"
@@ -166,21 +166,21 @@ alias tla='tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d 
 alias tn='tmux new -s'
 alias trc='vim ~/.tmux.conf'
 alias ttl="tart list"
-function tvl() {
+tvl() {
     [[ $# -lt 1 ]] && { echo "Usage: tvl <host>"; return 1; }
     ssh -t "$1" "tmux list-sessions"
 }
-function tvs() {
+tvs() {
     [[ $# -lt 2 ]] && { echo "Usage: tvs <host> <session>"; return 1; }
     ssh -t "$1" "tmux new-session -A -s $2"
 }
 alias v="vim"
-function vf() {
+vf() {
     local file
     file=$(fzf --preview "bat --color=always --style=numbers {}") || return
     vim "$file"
 }
-function vg() {
+vg() {
     local result file line
     result=$(rg --line-number "$1" | fzf --delimiter=: --preview 'bat --color=always --highlight-line {2} {1}') || return
     file=$(echo "$result" | awk -F: '{print $1}')
