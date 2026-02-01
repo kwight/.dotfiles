@@ -52,7 +52,6 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 # Aliases & Functions
 # ------------------------------------------------------------------------------
 
-# Introspection
 function a() {
     if [[ $(whence -w $1) == "$1: function" ]]; then
         type -f $1
@@ -62,43 +61,24 @@ function a() {
         return 1
     fi
 }
-
-# Bun
 alias bi='bun install'
 alias br='bun run --bun'
 alias brf='bun run format'
-alias brtd='bun run tauri dev'
 alias brtb='bun run tauri build'
+alias brtd='bun run tauri dev'
 alias bu='bun update'
-
-# Claude
-alias cc="claude"
-alias ccd="claude --debug"
-
-# Laravel
-alias cda='composer dump-autoload'
-alias pacc="php artisan cache:clear"
-alias pamfs="php artisan migrate:fresh --seed"
-alias paqw="php artisan queue:work --queue=critical,default,low"
-
-# Navigation
-alias cdc="cd ~/code"
-alias cdi="cd ~/code/ion"
-alias cdo="cd ~/.dotfiles"
 function c() {
     local dir
     dir=$(find ${1:-.} \( -path '*/\.*' -o -path '*/node_modules*' \) -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$dir"
 }
-
-# General
+alias cc="claude"
+alias ccd="claude --debug"
+alias cda='composer dump-autoload'
+alias cdc="cd ~/code"
+alias cdi="cd ~/code/ion"
+alias cdo="cd ~/.dotfiles"
 alias cl="clear"
 alias fm="open -a filemerge"
-alias l="ls -ahlG"
-alias m="man"
-alias p="pwd"
-alias rmr="rm -rfv"
-
-# Git
 alias g="git status"
 alias ga="git add -p"
 alias gaa="git add"
@@ -108,7 +88,7 @@ alias gbi="git bisect start"
 alias gbib="git bisect bad"
 alias gbig="git bisect good"
 alias gbir="git bisect reset"
-gbs() {
+function gbs() {
     git checkout "$(git for-each-ref refs/heads --color=always --sort -committerdate --format='%(HEAD)%(color:reset);%(color:yellow)%(refname:short)%(color:reset);%(contents:subject);%(color:green)(%(committerdate:relative))%(color:blue);<%(authorname)>' | column -t -s ';' | cut -c-$COLUMNS | fzf --ansi --no-sort --border --height 40% | awk '{print $1}')"
 }
 alias gc="git commit"
@@ -156,18 +136,17 @@ alias gstl="git stash list"
 alias gsts="git stash show -p"
 alias gsu="git submodule update --recursive"
 alias gsui="git submodule update --init --recursive"
-alias zomg="git reset --hard && git clean -f -d"
-
-# History
 alias hi="history | rg"
-
-# Ollama
+alias l="ls -ahlG"
+alias m="man"
 alias ol="ollama list"
 alias op="ollama pull"
 alias ops="ollama ps"
 function or() { local model=$(ollama list | fzf | awk '{print $1}'); ollama run $model; }
-
-# Python
+alias p="pwd"
+alias pacc="php artisan cache:clear"
+alias pamfs="php artisan migrate:fresh --seed"
+alias paqw="php artisan queue:work --queue=critical,default,low"
 alias pfr="pip freeze > requirements.txt"
 alias pip=pip3
 alias pir="pip install -r requirements.txt"
@@ -176,24 +155,17 @@ alias pve="python -m venv .venv"
 alias pvea="source .venv/bin/activate"
 alias pved="deactivate"
 alias python=python3
-
-# Tart VM
-alias ttl="tart list"
-
-# Source
+alias rmr="rm -rfv"
 alias so="source ~/.zshrc"
-
-# Tmux
 alias ta='tmux attach -t'
-alias tl='tmux list-sessions'
-alias tla='tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2'
 alias tk='tmux kill-session -t'
 alias tka='tmux kill-server'
+alias tl='tmux list-sessions'
+alias tla='tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d " " -f2'
 alias tn='tmux new -s'
 alias trc='vim ~/.tmux.conf'
+alias ttl="tart list"
 alias tv='tmux -V'
-
-# Vim
 alias v="vim"
 function vf() {
     local file
@@ -208,8 +180,7 @@ function vg() {
     vim "+$line" "$file"
 }
 alias vrc="vim ~/.dotfiles/vim/vimrc"
-
-# ZSH Config
+alias zomg="git reset --hard && git clean -f -d"
 alias zrc="vim ~/.zshrc"
 alias zrcg="curl -sL https://gist.githubusercontent.com/kwight/2e0b87edaa301bf47885cc1fc156b51f/raw -o ~/.zshrc && source ~/.zshrc"
 
