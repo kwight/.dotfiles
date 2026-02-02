@@ -187,12 +187,16 @@ bindkey -v
 zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
 
-# Detect VM and set prompt accordingly
+# Detect VM/SSH and set prompt accordingly
 IS_VM=false
+IS_SSH=false
 [[ $(sysctl -n hw.model 2>/dev/null) == "VirtualMac"* ]] && IS_VM=true
+[[ -n "$SSH_TTY" ]] && IS_SSH=true
 
 if [[ "$IS_VM" == "true" ]]; then
     PS1='%K{red}%F{white}%m%f%k %F{cyan}%? %F{blue}%1~%f %F{green}${vcs_info_msg_0_}%F{white}> '
+elif [[ "$IS_SSH" == "true" ]]; then
+    PS1='%K{green}%F{white}%m%f%k %F{cyan}%? %F{blue}%1~%f %F{green}${vcs_info_msg_0_}%F{white}> '
 else
     PS1='%F{magenta}%m%f %F{cyan}%? %F{blue}%1~%f %F{green}${vcs_info_msg_0_}%F{white}> '
 fi
