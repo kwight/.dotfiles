@@ -196,7 +196,7 @@ IS_SSH=false
 if [[ "$IS_VM" == "true" ]]; then
     PS1='%K{red}%F{white}%m%f%k %F{cyan}%? %F{blue}%1~%f %F{green}${vcs_info_msg_0_}%F{white}> '
 elif [[ "$IS_SSH" == "true" ]]; then
-    PS1='%K{green}%F{white}%m%f%k %F{cyan}%? %F{blue}%1~%f %F{green}${vcs_info_msg_0_}%F{white}> '
+    PS1='%K{magenta}%F{white}%m%f%k %F{cyan}%? %F{blue}%1~%f %F{green}${vcs_info_msg_0_}%F{white}> '
 else
     PS1='%F{magenta}%m%f %F{cyan}%? %F{blue}%1~%f %F{green}${vcs_info_msg_0_}%F{white}> '
 fi
