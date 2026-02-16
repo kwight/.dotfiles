@@ -151,6 +151,8 @@ alias tla='tmux lsw -F "#{window_active} #{window_layout}" | grep "^1" | cut -d 
 alias tn='tmux new -s'
 alias trc='vim ~/.tmux.conf'
 alias ttl="tart list"
+tip() { tart ip "$1" --resolver arp; }
+ttr() { tart run "$1" --no-graphics --vnc-experimental; }
 tvl() {
     [[ $# -lt 1 ]] && { echo "Usage: tvl <host>"; return 1; }
     ssh -t "$1" "tmux list-sessions"
