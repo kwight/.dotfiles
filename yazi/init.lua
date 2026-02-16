@@ -1,0 +1,2 @@
+-- Yazi init script
+-- https://yazi-rs.github.io/docs/configuration/init

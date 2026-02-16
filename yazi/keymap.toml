@@ -1,0 +1,20 @@
+# Yazi keymap configuration
+# https://yazi-rs.github.io/docs/configuration/keymap
+#
+# Only overrides are needed here — yazi merges these with its defaults.
+# Default keybindings (hjkl nav, /, :, etc.) remain active.
+
+[[mgr.prepend_keymap]]
+on   = ["<C-n>"]
+run  = "tab_create --current"
+desc = "New tab in current directory"
+
+[[mgr.prepend_keymap]]
+on   = ["<C-w>"]
+run  = "tab_close 0"
+desc = "Close current tab"
+
+[[mgr.prepend_keymap]]
+on   = ["T"]
+run  = 'shell -- tmux split-window -h "yazi \"$0\""'
+desc = "Open in tmux split"

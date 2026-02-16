@@ -14,8 +14,8 @@ Then create `~/.gitconfig.local` with your name and email (see [Git Setup](https
 
 The install script will:
 - Install Homebrew (if needed)
-- Install dependencies: `fzf`, `ripgrep`, `bat`, `tmux`
-- Create symlinks for vim, tmux, zsh, and git configs
+- Install dependencies: `fzf`, `ripgrep`, `bat`, `tmux`, `yazi`, `fd`
+- Create symlinks for vim, tmux, zsh, git, and yazi configs
 
 ## Vim Plugins
 

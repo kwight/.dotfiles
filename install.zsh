@@ -19,7 +19,7 @@ fi
 
 # Install dependencies
 echo "Installing dependencies..."
-brew install fzf ripgrep bat tmux python@3.12
+brew install fzf ripgrep bat tmux python@3.12 yazi fd
 
 # Create symlinks
 links=(
@@ -28,6 +28,7 @@ links=(
     "$DOTFILES/zsh/zshrc:$HOME/.zshrc"
     "$DOTFILES/git/gitconfig:$HOME/.gitconfig"
     "$DOTFILES/git/gitignore:$HOME/.gitignore"
+    "$DOTFILES/yazi:$HOME/.config/yazi"
 )
 
 echo "Creating symlinks..."
