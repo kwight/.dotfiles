@@ -19,7 +19,7 @@ fi
 
 # Install dependencies
 echo "Installing dependencies..."
-brew install fzf ripgrep bat tmux
+brew install fzf ripgrep bat tmux python@3.12
 
 # Create symlinks
 links=(
